@@ -327,3 +327,45 @@
     \@openrightfalse
     \makeatother
 }{}
+
+% \sectionNoTocPageNum{<标题文本>}{<目录是否编页码，置空表示无页码>}{<正文是否生成标题，置空表示生成标题>}
+\newcommand{\sectionNoTocPageNum}[3]{%
+    \ifthenelse{\equal{#2}{haveTocPageNum}}{
+        \ifthenelse{\equal{#3}{onlyTocItem}}
+        {
+            \phantomsection
+            \addcontentsline{toc}{section}{#1}
+        }
+        {\sectionnonum{#1}}
+    }{
+        \addtocontents{toc}{\cftpagenumbersoff{section}} % 关闭页码
+        \ifthenelse{\equal{#3}{onlyTocItem}}
+        {
+            \phantomsection
+            \addcontentsline{toc}{section}{#1}
+        }
+        {\sectionnonum{#1}}
+        \addtocontents{toc}{\cftpagenumberson{section}} % 恢复页码
+    }
+}
+
+% \chapterNoTocPageNum{<标题文本>}{<目录是否编页码，置空表示无页码>}{<正文是否生成标题，置空表示生成标题>}
+\newcommand{\chapterNoTocPageNum}[3]{%
+    \ifthenelse{\equal{#2}{haveTocPageNum}}{
+        \ifthenelse{\equal{#3}{onlyTocItem}}
+        {
+            \phantomsection
+            \addcontentsline{toc}{chapter}{#1}
+        }
+        {\chapternonum{#1}}
+    }{
+        \addtocontents{toc}{\cftpagenumbersoff{chapter}} % 关闭页码
+        \ifthenelse{\equal{#3}{onlyTocItem}}
+        {
+            \phantomsection
+            \addcontentsline{toc}{chapter}{#1}
+        }
+        {\chapternonum{#1}}
+        \addtocontents{toc}{\cftpagenumberson{chapter}} % 恢复页码
+    }
+}
