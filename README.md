@@ -1,3 +1,24 @@
+# zjuthess-moreFlexible
+
+自己根据完成本科毕业论文期间对zjuthesis的一些修改。
+
+1. 在目录中添加“承诺书”、“致谢”、“摘要”章节，物理逻辑上这些章节位于`第一部分 毕业论文`之前，目录逻辑中位于`第一部分 毕业论文`之后。
+![1](.exFig/1.png)
+
+2. 添加参数`LeftEqRight`，控制TwoSide模式下左右页边距相等，仍保持奇偶页面页眉不同。提交电子版时可设置为`true`，美观一点。打印时建议设置为`false`。
+![2](.exFig/2.png)
+
+3. 添加参数`ClearEmptyPage`，在TwoSide模式下删除空白页，提交电子版时可设置为`true`，打印时建议设置为`false`。
+![3](.exFig/3.png)
+
+4. 目录中部分项（任务书、考核表等）不编页码。
+   使用`\sectionNoTocPageNum`和`\chapterNoTocPageNum`，需3个参数。
+   `\sectionNoTocPageNum{任务书}{}{}`：对应项在目录中不编页码。
+   `\sectionNoTocPageNum{任务书}{haveTocPageNum}{}`：在第二个参数传入`haveTocPageNum`可以将目录中的页面重新添加进来。
+   `\sectionNoTocPageNum{任务书}{}{onlyTocItem}`：在第三个参数传入`onlyTocItem`将不在正文中添加对应标题，仅在目录中添加对应条目。
+   ![4](.exFig/4.png)
+
+
 # 浙江大学学位论文 LaTeX 模板
 
 [![ZJUTHESIS](https://img.shields.io/badge/zjuthesis-latex-blue.svg)](https://thenetadmin.github.io/zjuthesis)
