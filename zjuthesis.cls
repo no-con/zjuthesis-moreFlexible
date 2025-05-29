@@ -36,6 +36,8 @@
 \DeclareBoolOption[true]{ListOfFigures}
 \DeclareBoolOption[true]{ListOfTables}
 \DeclareBoolOption[false]{ListOfAlgorithms}
+\DeclareStringOption[false]{LeftEqRight}
+\DeclareStringOption[false]{ClearEmptyPage}
 
 \ProcessKeyvalOptions*
 

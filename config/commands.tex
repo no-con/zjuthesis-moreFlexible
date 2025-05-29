@@ -320,3 +320,11 @@
 \newcommand{\manualAddSectionToContents}[3]{%
     \addtocontents{toc}{\protect\contentsline {section}{\protect\hyperlink{#2}{#1}}{\pageref{#3}}{}} 
 }
+
+\ifthenelse{\equal{\ClearEmptyPage}{true}}
+{
+    \makeatletter
+    % 删除 part 后的空白页
+    \patchcmd{\@endpart}{\newpage}{}{}{}
+    \makeatother
+}{}

@@ -45,7 +45,10 @@
     ListOfAlgorithms= false,
     % Title
     Title           = 毕业论文/设计题目,
-    TitleEng        = {{Graduation Thesis Title}}
+    TitleEng        = {{Graduation Thesis Title}},
+    % zjuthesis-moreFlexible
+    LeftEqRight     = true,             % TwoSide=true, keep left and right headers different. Left margin equals to right margin, 
+    ClearEmptyPage  = true,             % Submitting the electronic version of the thesis does not require blank pages.
 ]{zjuthesis}
 
 %% Uncomment the following lines if you need multi line titles on cover pages
@@ -62,6 +65,13 @@
 
 \newcommand{\inputundergraduate}
 {
+    % zjuthesis-moreFlexible
+    \ifthenelse{\equal{\ClearEmptyPage}{true}}
+    {
+        \let\cleardoublepage\clearpage
+    }{}
+    % zjuthesis-moreFlexible
+
     \ifthenelse{\equal{\Period}{final}}
     {
         % Final thesis

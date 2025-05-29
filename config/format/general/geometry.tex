@@ -3,13 +3,36 @@
 {
     % The top and left margins are set to 2.5 cm according to undergrad school standard
     % https://github.com/TheNetAdmin/zjuthesis-std/blob/b78c2147d329b9b3d18885a366e4f6040a8a9c8d/standard/README.rst
-    \geometry{
-        a4paper,
-        marginpar=0pt,
-        includeheadfoot,
-        vmargin={2.5cm, 2.0cm},
-        hmargin={2.5cm, 2.0cm},
-        headsep=4mm
+    % \geometry{
+    %     a4paper,
+    %     marginpar=0pt,
+    %     includeheadfoot,
+    %     vmargin={2.5cm, 2.0cm},
+    %     hmargin={2.5cm, 2.0cm},
+    %     headsep=4mm
+    % }
+
+    % zjuthesis-moreFlexible
+    \ifthenelse{\equal{\LeftEqRight}{true}}
+    {
+        \geometry{
+            a4paper,
+            marginpar=0pt,
+            includeheadfoot,
+            vmargin={2.5cm, 2.0cm},
+            hmargin={2.25cm, 2.25cm},
+            headsep=4mm
+        }
+    }
+    {
+        \geometry{
+            a4paper,
+            marginpar=0pt,
+            includeheadfoot,
+            vmargin={2.5cm, 2.0cm},
+            hmargin={2.5cm, 2.0cm},
+            headsep=4mm
+        }
     }
 }
 {
