@@ -1,4 +1,4 @@
-# zjuthess-moreFlexible
+# zjuthesis-moreFlexible
 
 自己根据完成本科毕业论文期间对zjuthesis的一些修改。
 
