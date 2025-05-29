@@ -303,3 +303,20 @@
   \addtocontents{toc}{\protect\setcounter{tocdepth}{#1}}%
   \setcounter{tocdepth}{#1}%
 }
+
+% zjuthesis-moreFlexible
+% \manualTocSection{<标题文本>}{<锚点>}{<标签>}
+\newcommand{\manualTocSection}[3]{%
+  \begin{center}
+    \phantomsection
+    \hypertarget{#2}{}
+    \label{#3}
+    \pdfbookmark[section]{#1}{#2}
+    \bfseries \zihao{3} #1
+  \end{center}
+}
+
+% \manualAddToContents{<标题文本>}{<锚点>}{<标签>}
+\newcommand{\manualAddSectionToContents}[3]{%
+    \addtocontents{toc}{\protect\contentsline {section}{\protect\hyperlink{#2}{#1}}{\pageref{#3}}{}} 
+}

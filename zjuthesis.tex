@@ -79,6 +79,12 @@
         \bodystyle
         \inputpage{final}{cover-part}
 
+        % zjuthesis-moreFlexible % 添加承诺书、致谢、摘要至目录，如果不需要直接注释下面三行
+        \prevstyle
+        \inputpage{final}{toc-previous}
+        \bodystyle
+        % zjuthesis-moreFlexible % 添加承诺书、致谢、摘要至目录，如果不需要直接注释上面三行
+
         \resetpagecounter{}
         \inputbody{final/content}
         \inputbody{final/post}
@@ -140,6 +146,12 @@
         \bodystyle
         \inputpage{final}{cover-part}
         \cleardoublepage
+
+        % zjuthesis-moreFlexible % 添加承诺书、致谢、摘要至目录，如果不需要直接注释下面三行
+        \prevstyle
+        \inputpage{final}{toc-previous}
+        \bodystyle
+        % zjuthesis-moreFlexible % 添加承诺书、致谢、摘要至目录，如果不需要直接注释上面三行
         
         \inputbody{final/content}
         \inputbody{final/post}
