@@ -324,7 +324,6 @@
 \ifthenelse{\equal{\ClearEmptyPage}{true}}
 {
     \makeatletter
-    % 删除 part 后的空白页
-    \patchcmd{\@endpart}{\newpage}{}{}{}
+    \@openrightfalse
     \makeatother
 }{}
