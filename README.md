@@ -13,11 +13,18 @@
 
 4. 目录中部分项（任务书、考核表等）不编页码。
    使用`\sectionNoTocPageNum`和`\chapterNoTocPageNum`，需3个参数。
+   
    `\sectionNoTocPageNum{任务书}{}{}`：对应项在目录中不编页码。
+   
    `\sectionNoTocPageNum{任务书}{haveTocPageNum}{}`：在第二个参数传入`haveTocPageNum`可以将目录中的页面重新添加进来。
+   
    `\sectionNoTocPageNum{任务书}{}{onlyTocItem}`：在第三个参数传入`onlyTocItem`将不在正文中添加对应标题，仅在目录中添加对应条目。
+   
    ![4](.exFig/4.png)
 
+
+
+---
 
 # 浙江大学学位论文 LaTeX 模板
 
