@@ -111,9 +111,19 @@
         \inputpage{proposal}{cover}
         \inputpage{proposal}{previous}
         
+        % zjuthesis-moreFlexible 为终稿版本中的开题报告部分添加目录
+        \startcontents[proposalPart]  % 开题报告局部目录
+        \stopcontents[proposalPart]   % 开题报告局部目录
+        \prevstyle
+        \inputpage{proposal}{proposal-toc}
+        \resumecontents[proposalPart]
+
         \bodystyle
         \inputbody{proposal/content}
 
+        \stopcontents[proposalPart]
+        % zjuthesis-moreFlexible 为终稿版本中的开题报告部分添加目录
+        
         \poststyle
         \inputpage{proposal}{post}
     }
